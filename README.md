@@ -1,7 +1,7 @@
 # Simple log parser in Ruby
 Not much in here, takes a log file and pints obut unique visits and page views.
 
-# Usage
+## Usage
 
 ```sh
 ./parser.rb webserver.log
@@ -23,7 +23,7 @@ Pageviews:
 /home 78 visits
 ```
 
-# Troubleshooting
+## Troubleshooting
 The `parser.rb` file needs to be executable:
 
 ```sh
