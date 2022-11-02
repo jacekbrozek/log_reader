@@ -16,7 +16,7 @@ RSpec.describe LogIndex do
     end
 
     # {
-    #   "/help_page/1" => ["126.318.035.038", "929.398.951.889", "722.247.931.582", "646.865.545.408"],
+    #   "/help_page/1" => ["126.318.035.038", "929.398.951.889", "126.318.035.038", "646.865.545.408"],
     #   "/contact" => ["184.123.665.067"],
     #   "/home" => ["184.123.665.067"],
     #   "/about/2" => ["444.701.448.104"],
@@ -27,7 +27,7 @@ RSpec.describe LogIndex do
 
   describe '#by_ip' do
     it 'returns the by_ip' do
-      expect(log_index.by_ip).to have(7).items
+      expect(log_index.by_ip).to have(6).items
     end
 
     it 'returns the by_ip as Hash' do
@@ -35,11 +35,10 @@ RSpec.describe LogIndex do
     end
 
     # {
-    #   "126.318.035.038" => ["/help_page/1"],
+    #   "126.318.035.038" => ["/help_page/1, "/help_page/1"],
     #   "184.123.665.067" => ["/contact", "/home"],
     #   "444.701.448.104" => ["/about/2", "/index"],
     #   "929.398.951.889" => ["/help_page/1"],
-    #   "722.247.931.582" => ["/help_page/1"],
     #   "061.945.150.735" => ["/about"],
     #   "646.865.545.408" => ["/help_page/1"]
     # }
